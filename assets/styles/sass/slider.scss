@@ -1,0 +1,140 @@
+$blue: #134880;
+
+.Slider-viewport {
+	height: 570px;
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.is-sliding {
+	transition: transform 0.3s linear 0s;
+}
+
+.Gallery-row {
+	height: 280px;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-start;
+
+	&--upper {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	&--lower {
+		position: absolute;
+		bottom: 0;
+		right: 170px;
+	}
+
+	img {
+		height: 100%;
+		border-radius: 5px;
+		margin-right: 10px;
+	}
+}
+
+.Slider-button-wrap {
+	position: absolute;
+    right: 10px;
+    top: 290px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Slider-Button {
+	padding: 30px;
+	background-color: transparent;
+    background-repeat: no-repeat;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    &:first-child {
+    	margin-bottom: 10px;
+    }
+
+    &:focus,
+    &:active {
+    	outline: none;
+    }
+
+    &:hover {
+		border-color: $blue;
+	}
+
+	&--left {
+		background-image: url('../images/arrow-gray-left.png');
+		background-position: center center;
+
+		&:hover {
+			background-image: url('../images/arrow-blue-left.png');
+		}
+	}
+
+	&--right {
+		background-image: url('../images/arrow-gray-right.png');
+		background-position: center center;
+
+		&:hover {
+			background-image: url('../images/arrow-blue-right.png');
+		}
+	}
+}
+
+.Content-wrap {
+	background-color: #fff;
+	height: 100%;
+}
+.border {
+	border: 1px solid rgba(99, 87, 87, 0.4);
+	border-radius: 5px;
+	background-color: rgba(99, 87, 87, 0.4);
+	margin-bottom: 50px;
+	padding: 40px;
+}
+p {
+	color: #ffffff;
+}
+.content {
+	color: #000000;
+}
+
+.Hero-text {
+	color: $blue;
+}
+.text-invisible {
+	opacity: 0;
+}
+.border-bottom {
+	border: 1px solid rgba(99, 87, 87, 0.4);
+	border-radius: 5px;
+	background-color: rgba(99, 87, 87, 0.4);
+	padding: 40px;
+	margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+	.Slider-viewport {
+		height: 250px;
+	}
+
+	.Slider-Button  {
+		padding: 20px;
+	}
+
+	.Gallery-row {
+		height: 120px;
+
+		&--lower {
+			right: 80px;
+		}
+	}
+
+	.Slider-button-wrap {
+		top: 130px;
+	}
+}
+
+
+ 
